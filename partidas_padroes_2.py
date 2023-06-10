@@ -226,5 +226,5 @@ if uploaded_file:
 
         # Exibir o nome da página atual
         st.write(f"Resultado de {sheet_name}:")
-        # Exibir as 5 primeiras linhas do dataframe obtido
-        st.write(df.head())
+        # Exibir as 10 primeiras linhas do dataframe obtido
+        st.write(df.head(10))
