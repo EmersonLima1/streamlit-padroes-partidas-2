@@ -16,7 +16,7 @@ if uploaded_file:
     num_total_partidas = st.number_input("Até que quantidade de entradas após o padrão ocorre você quer análise?", min_value=1, value=50, step=1)
     num_conjuntos = st.selectbox("Qual o padrão de tip (de 1 a 5 jogos consecutivos)?", [1, 2, 3, 4, 5])
 
-for sheet_name in pd.ExcelFile(uploaded_file).sheet_names:
+for sheet_name in sheet_names:
     
     # Tratando o arquivo Excel e obtendo o DataFrame tratado
     df = pd.read_excel(uploaded_file, sheet_name=sheet_name)
