@@ -1,0 +1,1 @@
+# streamlit-padroes-partidas-2
