@@ -9,11 +9,14 @@ st.set_page_config(page_title="InPES Futebol Virtual", page_icon=":soccer:")
 st.title('**Resultados do Futebol Virtual**')
 st.write('\n\n')
 
-# Definir configurações de estilo
-st.write("<style>div.row-widget.stRadio > div{flex-direction:row;}</style>", unsafe_allow_html=True)
-
 # Configurar tamanho da fonte das perguntas
-st.write("<style>label{font-size: 28px !important;}</style>", unsafe_allow_html=True)
+st.write("""
+    <style>
+    label span.css-145kmo2 {
+        font-size: 30px !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 # Perguntas para o usuário
 primeiro_tempo1 = st.selectbox("Qual o resultado do primeiro tempo?", ['0x0','0x1','0x2','0x3','0x4','0x5','1x0','1x1','1x2','1x3','1x4','1x5','2x1','2x2','2x3','2x4','2x5','3x1','3x2','3x3','3x4','3x5','4x1','4x2','4x3','4x4','4x5','5x1','5x2','5x3','5x4','5x5'])
