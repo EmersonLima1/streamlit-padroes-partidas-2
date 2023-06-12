@@ -24,7 +24,7 @@ def gerar_resultados():
   for sheet_name in sheet_names:
       
       # Tratando o arquivo Excel e obtendo o DataFrame tratado
-      df = pd.read_excel(uploaded_file, sheet_name=sheet_name)
+      df = excel_data.parse(sheet_name)
 
       # Define a primeira linha como os nomes das colunas
       df.columns = df.iloc[0]
