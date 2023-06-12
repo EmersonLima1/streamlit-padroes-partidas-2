@@ -9,10 +9,16 @@ st.set_page_config(page_title="InPES Futebol Virtual", page_icon=":soccer:")
 st.title('**Resultados do Futebol Virtual**')
 st.write('\n\n')
 
-# Perguntas ao usuário
+# Definir configurações de estilo
+st.write("<style>div.row-widget.stRadio > div{flex-direction:row;}</style>", unsafe_allow_html=True)
+
+# Configurar tamanho da fonte das perguntas
+st.write("<style>label{font-size: 18px !important;}</style>", unsafe_allow_html=True)
+
+# Perguntas para o usuário
 primeiro_tempo1 = st.selectbox("Qual o resultado do primeiro tempo?", ['0x0','0x1','0x2','0x3','0x4','0x5','1x0','1x1','1x2','1x3','1x4','1x5','2x1','2x2','2x3','2x4','2x5','3x1','3x2','3x3','3x4','3x5','4x1','4x2','4x3','4x4','4x5','5x1','5x2','5x3','5x4','5x5'])
 tempo_final1 = st.selectbox("Qual o resultado do tempo final?", ['0x0','0x1','0x2','0x3','0x4','0x5','1x0','1x1','1x2','1x3','1x4','1x5','2x1','2x2','2x3','2x4','2x5','3x1','3x2','3x3','3x4','3x5','4x1','4x2','4x3','4x4','4x5','5x1','5x2','5x3','5x4','5x5'])
-num_total_partidas = st.number_input("Até que quantidade de entradas após o padrão ocorre você quer análise?", min_value=1, value=50, step=1)
+num_total_partidas = st.number_input("Qual a quantidade de partidas após a ocorrência do padrão você deseja analisar?", min_value=1, value=50, step=1)
 num_conjuntos = st.selectbox("Qual o padrão de tip (de 1 a 5 jogos consecutivos)?", [1, 2, 3, 4, 5])
 
 def gerar_resultados():
