@@ -179,15 +179,15 @@ def gerar_resultados():
                       AM_counts[i] += 1
                       AM_found = True
                       
-                      if score1 + score2 > 1.5 and score1 + score2 < 2.5 :
+                      if score1 + score2 > 1.5:
                           Over_15_counts[i] += 1
                           over_15_found = True
                           
-                      if score1 + score2 > 2.5 and not over_15_found and score1 + score2 < 3.5:  # Verificar se não foi contado como over 1.5
+                      if score1 + score2 > 2.5:  # Verificar se não foi contado como over 1.5
                           Over_25_counts[i] += 1
                           over_25_found = True
                           
-                      if score1 + score2 > 3.5 and not over_15_found and not over_25_found:  # Verificar se não foi contado como over 1.5 e over 2.5
+                      if score1 + score2 > 3.5:  # Verificar se não foi contado como over 1.5 e over 2.5
                           Over_35_counts[i] += 1
                           over_35_found = True
                   
